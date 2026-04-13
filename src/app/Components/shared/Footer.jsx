@@ -1,52 +1,65 @@
+import { FaFacebook, FaLinkedin, FaInstagram  } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
+
 export default function Footer() {
     return (
-        <footer className="footer sm:footer-horizontal bg-[#1D2130] text-base-content p-10">
-            <nav>
-                <h6 className="footer-title">Company</h6>
-                <a className="link link-hover">About Us</a>
-                <a className="link link-hover">Why Choose us</a>
-                <a className="link link-hover">Pricing</a>
-                <a className="link link-hover">Testimonial</a>
-            </nav>
-            <nav>
-                <h6 className="footer-title">Resources</h6>
-                <a className="link link-hover">Privacy Policy</a>
-                <a className="link link-hover">Terms and Condition</a>
-                <a className="link link-hover">Blog</a>
-                <a className="link link-hover">Contact Us</a>
-            </nav>
-            <nav>
-                <h6 className="footer-title">Product</h6>
-                <a className="link link-hover">Project managment</a>
-                <a className="link link-hover">Time tracker</a>
-                <a className="link link-hover">Time schedule</a>
-                <a className="link link-hover">Lead generate</a>
-                <a className="link link-hover">Remote Collaboration</a>
-            </nav>
-            <nav>
-                <div className="flex items-center gap-2">
-                    <div className="relative w-8 h-8">
+        <footer className="bg-[#1D2130] text-white p-10 pb-5">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+                <nav className="flex flex-col gap-2">
+                    <h6 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-2">Company</h6>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">About Us</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Why Choose us</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Pricing</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Testimonial</a>
+                </nav>
+                <nav className="flex flex-col gap-2">
+                    <h6 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-2">Resources</h6>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Privacy Policy</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Terms and Condition</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Blog</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Contact Us</a>
+                </nav>
+                <nav className="flex flex-col gap-2">
+                    <h6 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-2">Product</h6>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Project management</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Time tracker</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Time schedule</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Lead generate</a>
+                    <a className="cursor-pointer hover:text-[#14ADD6] transition-colors">Remote Collaboration</a>
+                </nav>
+
+                <nav className="flex flex-col gap-4">
+                    <div className="flex items-center gap-2">
                         <img src="favicon.ico" alt="Orbit Logo" width={32} height={32} />
+                        <span className="text-xl font-extrabold bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">
+                            Orbit
+                        </span>
                     </div>
-                    <span className="text-xl font-extrabold bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">Orbit</span>
-                </div>
-                <p className="font-bold">Subscribe to our Newsletter</p>
-                <div>
-                    <input type="email" placeholder="Enter your Email" className="h-[56px] w-[290px] bg-[#2B2E3C]" />
-                    <button className="bg-[#FFFFFF] text-[#1D2130] h-[56px] w-[152] px-6 py-2.5 rounded-xl font-semibold hover:bg-slate-700 transition-colors">Subscribe</button>
-                </div>
-            </nav>
-            <div className="max-w-7xl mx-auto px-10 pb-6 flex items-center gap-5">
-                <div className="h-px flex-grow bg-gray-700" />
-                <span className="text-sm text-slate-500 whitespace-nowrap">© Copyright Orbit 2022</span>
-                <div className="flex gap-4 text-slate-400">
-                    <span className="cursor-pointer hover:text-white transition-colors">FB</span>
-                    <span className="cursor-pointer hover:text-white transition-colors">TW</span>
-                    <span className="cursor-pointer hover:text-white transition-colors">IG</span>
-                    <span className="cursor-pointer hover:text-white transition-colors">LN</span>
-                </div>
-                <div className="h-px flex-grow bg-gray-700" />
+                    <p className="font-bold text-lg">Subscribe to our Newsletter</p>
+                    <div className="relative flex items-center w-full max-w-[400px]">
+                        <input
+                            type="email"
+                            placeholder="Enter your Email"
+                            className="h-[64px] w-full bg-[#2B2E3C] rounded-2xl pl-6 pr-[140px] border border-gray-700 focus:outline-none focus:border-[#14ADD6]"
+                        />
+                        <button className="absolute right-2 bg-white text-[#1D2130] h-[48px] px-6 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </nav>
             </div>
+
+            <footer className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p className="text-sm opacity-70">
+                    © {new Date().getFullYear()} Orbit Inc. All rights reserved.
+                </p>
+                <div className="flex gap-6">
+                    <a href="#" className="text-white hover:text-[#14ADD6] transition-colors"><FaFacebook /></a>
+                    <a href="#" className="text-white hover:text-[#14ADD6] transition-colors"><RiTwitterXLine  /></a>
+                    <a href="#" className="text-white hover:text-[#14ADD6] transition-colors"><FaInstagram/></a>
+                    <a href="#" className="text-white hover:text-[#14ADD6] transition-colors"><FaLinkedin/></a>
+                </div>
+            </footer>
         </footer>
-    )
+    );
 }
