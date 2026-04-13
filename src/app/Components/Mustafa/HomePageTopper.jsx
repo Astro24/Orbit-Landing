@@ -12,13 +12,13 @@ export default function HP_Topper() {
                 </p>
             </div>
 
-            <div className="relative flex items-center w-full max-w-[450px]">
+            <div className="relative flex items-center w-full max-w-112.5">
                 <input
                     type="email"
                     placeholder="Enter your Email"
-                    className="h-[64px] w-full bg-white rounded-2xl pl-6 pr-[160px] border border-gray-300 focus:outline-none focus:border-[#14ADD6] shadow-sm"
+                    className="h-16 w-full bg-white rounded-2xl pl-6 pr-40 border border-gray-300 focus:outline-none focus:border-[#14ADD6] shadow-sm"
                 />
-                <button className="absolute right-2 bg-[#2B2E3C] text-white h-[48px] px-6 rounded-xl font-bold hover:bg-[#14ADD6] transition-colors">
+                <button className="absolute right-2 bg-[#2B2E3C] text-white h-12 px-6 rounded-xl font-bold hover:bg-[#14ADD6] transition-colors">
                     Get Your Free Trial
                 </button>
             </div>

@@ -31,18 +31,18 @@ export default function Footer() {
                 <nav className="flex flex-col gap-4">
                     <div className="flex items-center gap-2">
                         <img src="favicon.ico" alt="Orbit Logo" width={32} height={32} />
-                        <span className="text-xl font-extrabold bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">
+                        <span className="text-xl font-extrabold bg-liner-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">
                             Orbit
                         </span>
                     </div>
                     <p className="font-bold text-lg">Subscribe to our Newsletter</p>
-                    <div className="relative flex items-center w-full max-w-[400px]">
+                    <div className="relative flex items-center w-full max-w-100">
                         <input
                             type="email"
                             placeholder="Enter your Email"
-                            className="h-[64px] w-full bg-[#2B2E3C] rounded-2xl pl-6 pr-[140px] border border-gray-700 focus:outline-none focus:border-[#14ADD6]"
+                            className="h-16 w-full bg-[#2B2E3C] rounded-2xl pl-6 pr-35 border border-gray-700 focus:outline-none focus:border-[#14ADD6]"
                         />
-                        <button className="absolute right-2 bg-white text-[#1D2130] h-[48px] px-6 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+                        <button className="absolute right-2 bg-white text-[#1D2130] h-12 px-6 rounded-xl font-bold hover:bg-gray-200 transition-colors">
                             Subscribe
                         </button>
                     </div>
