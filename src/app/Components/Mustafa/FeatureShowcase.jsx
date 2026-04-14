@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function FeatureShowcase() {
     return (
-        <section className="bg-gradient-to-r from-[#E6F4F1] to-[#E8EEFB] py-15 px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <section className="max-w-7xl mx-auto bg-gradient-to-r from-[#E6F4F1] to-[#E8EEFB] py-15 px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6">
                 <h2 className="font-bold text-5xl text-[#1D2130] leading-tight max-w-md">
                     More impressions, more conversions

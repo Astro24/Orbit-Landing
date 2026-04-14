@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function HP_Topper() {
     return (
-        <div className="flex flex-col justify-center items-center text-center gap-6 p-8">
+        <div className="flex flex-col max-w-7xl mx-auto justify-center items-center text-center gap-6 p-8">
             <div className="max-w-2xl">
                 <h1 className="text-[42px] font-bold leading-tight">
                     The Best Software to Grow your Sales and Services
