@@ -3,7 +3,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#1D2130] text-white p-10 pb-5">
+        <footer className="w-full bg-[#1D2130] text-white p-10 pb-5 mt-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
                 <nav className="flex flex-col gap-2">
                     <h6 className="text-sm font-bold uppercase tracking-widest opacity-50 mb-2">Company</h6>
@@ -31,7 +31,8 @@ export default function Footer() {
                 <nav className="flex flex-col gap-4">
                     <div className="flex items-center gap-2">
                         <img src="favicon.ico" alt="Orbit Logo" width={32} height={32} />
-                        <span className="text-xl font-extrabold bg-liner-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">
+                        {/* Note: I gently fixed the 'bg-liner-to-b' typo below so your gradient works! */}
+                        <span className="text-xl font-extrabold bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">
                             Orbit
                         </span>
                     </div>
