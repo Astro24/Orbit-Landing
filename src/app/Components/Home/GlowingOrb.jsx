@@ -1,7 +1,7 @@
 export default function GlowingOrb() {
     return (
-        <div className="absolute -z-0">
-            <div className="w-120 h-120 rounded-full bg-gradient-to-r from-[#61c7e3] to-[#4b539c] opacity-60 animate-pulse blur-[90px]" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+            <div className="w-96 h-96 rounded-full bg-gradient-to-r from-cyan-300 to-blue-400 opacity-30 blur-3xl animate-pulse"></div>
         </div>
     );
 }
