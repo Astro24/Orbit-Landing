@@ -1,9 +1,11 @@
 import Image from "next/image"
 
+import GlowingOrb from "./GlowingOrb.jsx"
+
 export default function HP_Topper() {
     return (
         <div className="flex flex-col max-w-7xl mx-auto justify-center items-center text-center gap-6 p-8">
-            <div className="max-w-2xl">
+            <div className="max-w-2xl z-10">
                 <h1 className="text-[42px] font-bold leading-tight">
                     The Best Software to Grow your Sales and Services
                 </h1>
@@ -12,7 +14,7 @@ export default function HP_Topper() {
                 </p>
             </div>
 
-            <div className="relative flex items-center w-full max-w-112.5">
+            <div className="relative flex items-center w-full max-w-112.5 z-10">
                 <input
                     type="email"
                     placeholder="Enter your Email"
@@ -22,8 +24,8 @@ export default function HP_Topper() {
                     Get Your Free Trial
                 </button>
             </div>
-
-            <div className="mt-8">
+            <GlowingOrb className="mr-100 mb-48" />
+            <div className="mt-8 z-10">
                 <Image 
                     src="/Mustafa/Dashboard image.svg" 
                     alt="Dashboard Preview"

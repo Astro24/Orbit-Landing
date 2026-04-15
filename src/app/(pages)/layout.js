@@ -3,10 +3,10 @@ import Footer from "../Components/shared/Footer";
 
 export default function MainLayout({ children }) {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar /> 
       
-      <main>{children}</main>
+      <main className="grow">{children}</main>
       
       <Footer />
     </div>

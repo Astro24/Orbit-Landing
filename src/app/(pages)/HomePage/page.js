@@ -3,14 +3,15 @@ import { AiOutlineRobot } from "react-icons/ai";
 import { MdOutlineCamera } from "react-icons/md";
 import { IoMdChatboxes } from "react-icons/io";
 import { RiRobot2Fill } from "react-icons/ri";
-import { GiNetworkBars } from "react-icons/gi";
+import { IoCellular } from "react-icons/io5";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { SiActivitypub } from "react-icons/si";
-import HP_Topper from "@/app/Components/Mustafa/HomePageTopper";
-import BestSolution from "@/app/Components/Mustafa/BestSolution";
-import UpscaleBusiness from "@/app/Components/Mustafa/UpscaleBusiness";
-import FeatureShowcase from "@/app/Components/Mustafa/FeatureShowcase.jsx";
-import LogesLine from "@/app/Components/Mustafa/LogesLine.jsx";
+import HP_Topper from "@/app/Components/Home/HomePageTopper";
+import BestSolution from "@/app/Components/Home/BestSolution";
+import UpscaleBusiness from "@/app/Components/Home/UpscaleBusiness";
+import FeatureShowcase from "@/app/Components/Home/FeatureShowcase.jsx";
+import LogesLine from "@/app/Components/Home/LogesLine.jsx";
+import Testimonials from "@/app/Components/Home/Testimonials.jsx";
 
 const primaryFeatures = [
     {
@@ -64,7 +65,7 @@ export default function Home() {
 
             <UpscaleBusiness />
             <FeatureShowcase />
-            <LogesLine/>
+            <LogesLine />
 
             <UpscaleBusiness
                 title="Discover More"
@@ -72,9 +73,9 @@ export default function Home() {
                 Paragraph="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore."
                 IconBG="bg-[#F4F5F7]"
                 Simples={[
-                    { id: 1,Icon: <GiNetworkBars /> , text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
-                    { id: 2,Icon: <IoPersonAddSharp /> , text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
-                    { id: 3,Icon: <SiActivitypub /> , text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
+                    { id: 1, Icon: <IoCellular />, text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
+                    { id: 2, Icon: <IoPersonAddSharp />, text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
+                    { id: 3, Icon: <SiActivitypub />, text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr." },
                 ]}
             />
 
@@ -84,6 +85,28 @@ export default function Home() {
                 containerBg="bg-white"
                 cardBg="bg-[#F9F6FF]"
                 iconColor="text-[#5D5FEF]"
+            />
+            <Testimonials
+                testimonials={[
+                    {
+                        quote: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+                        name: "Ron Wood",
+                        role: "CEO",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mickey_Mouse_%28poster_version%29.svg/1280px-Mickey_Mouse_%28poster_version%29.svg.png"
+                    },
+                    {
+                        quote: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+                        name: "Mark Mason",
+                        role: "Marketing Manager",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mickey_Mouse_%28poster_version%29.svg/1280px-Mickey_Mouse_%28poster_version%29.svg.png"
+                    },
+                    {
+                        quote: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+                        name: "Sam Preston",
+                        role: "CTO",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mickey_Mouse_%28poster_version%29.svg/1280px-Mickey_Mouse_%28poster_version%29.svg.png"
+                    }
+                ]}
             />
         </div>
     );

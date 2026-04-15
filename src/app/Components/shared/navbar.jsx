@@ -1,34 +1,79 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
-    return (
-        <nav className="flex items-center justify-between max-w-7xl mx-auto p-4 sm:p-6 font-Roboto">
-            <div className="flex items-center gap-2">
-                <Link href='HomePage' className="flex items-center gap-2">
-                    <div className="relative w-8 h-8">
-                        <img src="favicon.ico" alt="Orbit Logo" width={32} height={32} />
-                    </div>
-                    <span className="text-xl font-extrabold bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent">Orbit</span>
-                </Link>
-            </div>
-            <div className="flex items-center gap-8">
-                <div className="hidden md:flex items-center gap-6 text-gray-600 font-medium">
-                    <Link href="/HomePage" className="hover:text-black">Home</Link>
-                    <Link href="/Product" className="hover:text-black">Product</Link>
-                    <Link href="/Pricing" className="hover:text-black">Pricing</Link>
-                    <Link href="/Aboutus" className="hover:text-black">About Us</Link>
-                    <Link href="/Blog" className="hover:text-black">Blog</Link>
-                    <Link href="/Contact" className="hover:text-black">Contact</Link>
-                </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-                <Link
-                    href="/trial"
-                    className="bg-[#1e293b] text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-slate-700 transition-colors"
-                >
-                    Free trial
-                </Link>
-            </div>
-        </nav>
-    )
+  const navLinks = [
+    { name: "Home", href: "/HomePage" },
+    { name: "Product", href: "/Product" },
+    { name: "Pricing", href: "/Pricing" },
+    { name: "About Us", href: "/AboutUS" },
+    { name: "Blog", href: "/Blog" },
+    { name: "Contact", href: "/Contact" },
+  ];
+
+  return (
+    <nav className="w-full bg-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+        
+        <Link href="/HomePage" className="flex items-center gap-2 shrink-0">
+          <div className="relative w-9 h-9">
+             <img src="favicon.ico" alt="Orbit Logo" className="w-full h-full object-contain" />
+          </div>
+          <span className="text-2xl font-black bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent tracking-tight">
+            Orbit
+          </span>
+        </Link>
+
+        <div className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              href={link.href} 
+              className="text-[15px] font-medium text-slate-600 hover:text-[#14ADD6] transition-colors"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Link
+            href="/trial"
+            className="hidden sm:inline-flex items-center justify-center bg-[#1D2130] text-white px-7 py-3 rounded-xl font-bold hover:bg-slate-800 transition-all active:scale-95 text-sm"
+          >
+            Free trial
+          </Link>
+
+          <button 
+            className="md:hidden flex flex-col gap-1.5 p-2" 
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className={`w-6 h-0.5 bg-slate-800 transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <div className={`w-6 h-0.5 bg-slate-800 transition-all ${isOpen ? 'opacity-0' : ''}`} />
+            <div className={`w-6 h-0.5 bg-slate-800 transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </button>
+        </div>
+      </div>
+
+      <div className={`
+        md:hidden overflow-hidden transition-all duration-300 bg-white border-b
+        ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
+      `}>
+        <div className="px-6 py-8 flex flex-col gap-5 border-t">
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href} className="text-lg font-semibold text-slate-700">
+              {link.name}
+            </Link>
+          ))}
+          <Link href="/trial" className="w-full text-center bg-[#1D2130] text-white py-4 rounded-xl font-bold">
+            Get Started Free
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
 }
