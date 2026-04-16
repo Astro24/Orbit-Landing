@@ -24,7 +24,6 @@ export default function HP_Topper() {
                     Get Your Free Trial
                 </button>
             </div>
-            <GlowingOrb className="mr-100 mb-48" />
             <div className="mt-8 z-10">
                 <Image 
                     src="/Mustafa/Dashboard image.svg" 
