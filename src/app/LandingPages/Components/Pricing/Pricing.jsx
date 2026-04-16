@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ImCheckmark } from "react-icons/im";
 
 export default function Pricing({ variant, onChange }) {
     const [selectedPlan, setSelectedPlan] = useState(1);
@@ -45,27 +46,26 @@ export default function Pricing({ variant, onChange }) {
     ];
 
     return (
-        <div className="min-h-screen px-4 sm:px-6 lg:px-10 py-10 flex flex-col items-center bg-white">
+        <div className="min-h-screen px-6 py-16 flex flex-col items-center bg-[#F7F8FC]">
 
-            {/* heading */}
-            <div className="text-center max-w-2xl mb-8">
-                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold">
+            {/* Title */}
+            <div className="text-center max-w-2xl mb-10">
+                <h1 className="text-4xl md:text-5xl font-bold">
                     Pricing plan that suit you
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg mt-3 text-gray-500">
+                <p className="mt-4 text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
             </div>
 
-            {/* tabs */}
-            <div className="flex bg-[#E0E4FC] rounded-2xl p-1 mb-10 w-full max-w-xs sm:max-w-sm justify-between">
-
+            {/* Toggle */}
+            <div className="flex bg-[#EDEFFF] rounded-full p-1 mb-12 w-[260px]">
                 <button
                     onClick={() => onChange("month")}
-                    className={`flex-1 py-2 text-sm sm:text-base rounded-2xl transition-all duration-300
-          ${variant === "month"
-                            ? "bg-[#1D2130] text-white"
-                            : "text-black"
+                    className={`flex-1 py-2 rounded-full text-sm font-medium transition
+                    ${variant === "month"
+                            ? "bg-[#1D2130] text-white shadow"
+                            : "text-gray-600"
                         }`}
                 >
                     Monthly
@@ -73,64 +73,66 @@ export default function Pricing({ variant, onChange }) {
 
                 <button
                     onClick={() => onChange("year")}
-                    className={`flex-1 py-2 text-sm sm:text-base rounded-2xl transition-all duration-300
-          ${variant === "year"
-                            ? "bg-[#1D2130] text-white"
-                            : "text-black"
+                    className={`flex-1 py-2 rounded-full text-sm font-medium transition
+                    ${variant === "year"
+                            ? "bg-[#1D2130] text-white shadow"
+                            : "text-gray-600"
                         }`}
                 >
                     Yearly
                 </button>
             </div>
 
-            {/* cards */}
-            <div className="
-        w-full max-w-7xl
-        grid gap-6
-        grid-cols-1 
-        sm:grid-cols-2 
-        lg:grid-cols-3
-      ">
+            {/* Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+
                 {plans.map((plan, i) => (
                     <div
                         key={i}
                         onClick={() => setSelectedPlan(i)}
-                        className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300
+                        className={`p-8 rounded-3xl cursor-pointer transition-all duration-300 text-center
 
-            ${selectedPlan === i
-                                ? "bg-gradient-to-r from-[#D7E7F9] to-[#D5F4EC] scale-[1.03] sm:scale-105 shadow-xl border-2 border-[#384295]"
-                                : "bg-white border hover:shadow-md"
+                        ${selectedPlan === i
+                                ? "bg-gradient-to-r from-[#D7E7F9] to-[#D5F4EC] scale-105 shadow-xl border border-[#384295]"
+                                : "bg-white shadow-sm hover:shadow-md"
                             }
-            `}
+                        `}
                     >
-                        <h2 className="text-lg sm:text-xl font-bold text-center mb-2">
+                        {/* Name */}
+                        <h2 className="text-2xl font-bold mb-2">
                             {plan.name}
                         </h2>
 
-                        <p className="text-center text-gray-400 text-xs sm:text-sm mb-4">
+                        <p className="text-gray-400 text-sm mb-6">
                             {plan.comment}
                         </p>
 
-                        <ul className="flex flex-col gap-2 sm:gap-3 mb-6">
+                        {/* Price */}
+                        <div className="mb-6">
+                            <h3 className="text-3xl font-bold">
+                                {plan.price}
+                            </h3>
+                        </div>
+
+                        {/* Features */}
+                        <ul className="flex flex-col gap-3 text-left mb-8">
                             {plan.features.map((feature, i) => (
-                                <li key={i} className="flex items-center gap-2 text-xs sm:text-sm">
-                                    <span className="text-green-500">✔</span>
+                                <li key={i} className="flex items-center gap-2 text-sm">
+                                    <span className="text-green-500">
+                                        <ImCheckmark size={14} />
+                                    </span>
                                     <span>{feature}</span>
                                 </li>
                             ))}
                         </ul>
 
-                        <div className="text-center mb-4">
-                            <h3 className="text-xl sm:text-2xl font-bold">
-                                {plan.price}
-                            </h3>
-                        </div>
-
-                        <button className="w-full bg-black text-white py-2 text-sm sm:text-base rounded-lg hover:opacity-80 transition">
+                        {/* Button */}
+                        <button className="w-full bg-black text-white py-2 rounded-lg hover:opacity-80 transition">
                             Get started
                         </button>
                     </div>
                 ))}
+
             </div>
 
         </div>
