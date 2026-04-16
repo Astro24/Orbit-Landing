@@ -14,7 +14,7 @@ export default function View() {
                     </Link>
                 </div>
             </div>
-            <GlowingOrb className="-z-10"/>
+            <GlowingOrb className="justify-center items-center"/>
         </div>
         </div>
     );

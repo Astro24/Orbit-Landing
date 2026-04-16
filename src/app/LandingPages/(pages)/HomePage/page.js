@@ -6,12 +6,12 @@ import { RiRobot2Fill } from "react-icons/ri";
 import { IoCellular } from "react-icons/io5";
 import { IoPersonAddSharp } from "react-icons/io5";
 import { SiActivitypub } from "react-icons/si";
-import HP_Topper from "@/app/Components/Home/HomePageTopper";
-import BestSolution from "@/app/Components/Home/BestSolution";
-import UpscaleBusiness from "@/app/Components/Home/UpscaleBusiness";
-import FeatureShowcase from "@/app/Components/Home/FeatureShowcase.jsx";
-import LogesLine from "@/app/Components/Home/LogesLine.jsx";
-import Testimonials from "@/app/Components/Home/Testimonials.jsx";
+import HP_Topper from "@/app/LandingPages/Components/Home/HomePageTopper";
+import BestSolution from "@/app/LandingPages/Components/Home/BestSolution";
+import UpscaleBusiness from "@/app/LandingPages/Components/Home/UpscaleBusiness";
+import FeatureShowcase from "@/app/LandingPages/Components/Home/FeatureShowcase.jsx";
+import LogesLine from "@/app/LandingPages/Components/Home/LogesLine.jsx";
+import Testimonials from "@/app/LandingPages/Components/Home/Testimonials.jsx";
 
 const primaryFeatures = [
     {
