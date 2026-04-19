@@ -21,7 +21,7 @@ export default function AboutUS_Topper() {
             <img
               src={item.src}
               alt={item.alt}
-              className="w-65 h-72 object-cover"
+              className="w-68 h-72 object-cover"
             />
           </div>
         ))}
