@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GlowingOrb from "../Home/GlowingOrb";
 
 export default function View() {
     return (
@@ -13,6 +14,7 @@ export default function View() {
                     </Link>
                 </div>
             </div>
+            <GlowingOrb className="justify-center items-center"/>
         </div>
         </div>
     );
