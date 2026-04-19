@@ -21,7 +21,7 @@ export default function Navbar() {
         
         <Link href="/HomePage" className="flex items-center gap-2 shrink-0">
           <div className="relative w-9 h-9">
-             <img src="favicon.ico" alt="Orbit Logo" className="w-full h-full object-contain" />
+             <img src="./public/tafa/Group 13.svg" alt="Orbit Logo" className="w-full h-full object-contain" />
           </div>
           <span className="text-2xl font-black bg-gradient-to-b from-[#14ADD6] to-[#384295] bg-clip-text text-transparent tracking-tight">
             Orbit
