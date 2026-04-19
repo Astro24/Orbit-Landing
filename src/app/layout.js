@@ -1,15 +1,18 @@
-// app/layout.js
 import "./styles/globals.css";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+    title: "My Web App",
+    description: "Built with Next.js and Tailwind CSS",
+};
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <nav></nav>
-
-                <main>{children}</main>
-
-                <footer></footer>
+                {children}
             </body>
         </html>
     );

@@ -1,4 +1,4 @@
-import AboutUS_Topper from "@/app/LandingPages/Components/ABout_US/Toper"
+import AboutUS_Topper from "../../Components/ABout_US/Toper"
 import Goals from "../../Components/ABout_US/Goals"
 
 export default function AboutUS() {
