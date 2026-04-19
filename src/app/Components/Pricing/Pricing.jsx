@@ -58,7 +58,7 @@ export default function Pricing({ variant, onChange }) {
                 </p>
             </div>
 
-            {/* Toggle */}
+            {/* Monthly and Yearly */}
             <div className="flex bg-[#EDEFFF] rounded-full p-1 mb-12 w-[260px]">
                 <button
                     onClick={() => onChange("month")}

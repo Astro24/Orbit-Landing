@@ -2,9 +2,10 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import { FiMail } from "react-icons/fi";
+import View from "@/app/Components/ViewPricing/View";
 export default function ContactSection() {
     return (
-        <section className="flex flex-col justify-center items-center py-20 bg-gray-100">
+        <section className="flex flex-col justify-center items-center py-20 bg-[#F7F8FC]">
 
             <h1 className="text-7xl font-bold text-center mb-10">
                 Get in touch with us
@@ -100,6 +101,7 @@ export default function ContactSection() {
                     </div>
                 </div>
             </div>
+            <View />
         </section>
     );
 }

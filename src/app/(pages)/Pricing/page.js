@@ -9,7 +9,7 @@ export default function PricingCar() {
   const [variant, setVariant] = useState("month");
 
   return (
-    <div className="text-center mt-10">
+    <div className="text-center mt-10 ">
       <Pricing variant={variant} onChange={setVariant} />
       <FAQ />
       <View />
