@@ -8,7 +8,7 @@ import { IoPersonAddSharp } from "react-icons/io5";
 import { SiActivitypub } from "react-icons/si";
 import HP_Topper from "@/app/LandingPages/Components/Home/HomePageTopper";
 import BestSolution from "@/app/LandingPages/Components/Home/BestSolution";
-import UpscaleBusiness from "@/app/LandingPages/Components/Home/UpscaleBusiness";
+import UpscaleBusiness from "./Home/UpscaleBusiness";
 import FeatureShowcase from "@/app/LandingPages/Components/Home/FeatureShowcase.jsx";
 import LogesLine from "@/app/LandingPages/Components/Home/LogesLine.jsx";
 import Testimonials from "@/app/LandingPages/Components/Home/Testimonials.jsx";
