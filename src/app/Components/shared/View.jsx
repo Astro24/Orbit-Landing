@@ -3,19 +3,16 @@ import GlowingOrb from "../Home/GlowingOrb";
 
 export default function View() {
     return (
-        <div className="flex justify-center items-center">
-        <div className="card justify-center items-center text-center w-full max-w-4xl rounded-2xl p-4 sm:p-6 lg:p-10 ">
-            <div className="card-body z-10">
-                <h1 className="card-title md:text-2xl lg:text-3xl ">Are you ready to grow your business with us?</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
-                <div className="card-actions justify-center">
-                    <Link href="/Pricing" className="btn bg-[#1D2130]">
-                        View Pricing
-                    </Link>
-                </div>
-            </div>
-            <GlowingOrb className="justify-center items-center"/>
-        </div>
+        <div className="w-full flex flex-col items-center py-24 bg-gradient-to-t from-[#E6F4FE] to-transparent text-center px-4 mt-8">
+            <h2 className="text-4xl font-bold mb-4 max-w-xl">
+                Are you ready to grow your business with us?
+            </h2>
+            <p className="text-gray-500 mb-8">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+            </p>
+            <button className="bg-[#111322] hover:bg-gray-800 text-white px-8 py-3 rounded-md font-medium transition-colors">
+                View Pricing
+            </button>
         </div>
     );
 
