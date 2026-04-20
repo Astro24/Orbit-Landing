@@ -35,30 +35,30 @@ export default function TeamSection() {
     return (
         <section className="w-full bg-white py-20 px-6">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
-                
+
                 <div className="lg:w-1/3 flex flex-col gap-4 sticky top-10">
-                    <h2 className="text-[36px] font-bold text-[#1D2130] leading-tight">
-                        Our talented Team
-                    </h2>
-                    <p className="text-[#52525B] leading-relaxed max-w-md">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+                    <h1 className="text-4xl font-bold mb-4">
+                        We are proud of our products
+                    </h1>
+                    <p className="text-gray-500">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </p>
                 </div>
 
                 <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {teamMembers.map((member, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="flex flex-col rounded-[20px] overflow-hidden"
                         >
                             <div className="h-[240px] w-full overflow-hidden bg-gray-200">
-                                <img 
-                                    src={member.imageUrl} 
-                                    alt={member.name} 
+                                <img
+                                    src={member.imageUrl}
+                                    alt={member.name}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            
+
                             <div className="bg-[#E6E9FD] p-5 flex flex-col gap-1">
                                 <h3 className="font-bold text-lg text-[#1D2130]">
                                     {member.name}
@@ -70,7 +70,7 @@ export default function TeamSection() {
                         </div>
                     ))}
                 </div>
-                
+
             </div>
         </section>
     );
