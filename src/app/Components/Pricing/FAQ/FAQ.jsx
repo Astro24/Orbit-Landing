@@ -1,6 +1,6 @@
 export default function FAQ() {
     return (
-        <section className="flex justify-center items-center px-4 sm:px-6 lg:px-10 py-10">
+        <section className="flex justify-center items-center px-4 sm:px-6 lg:px-10 py-10 bg-[#F7F8FC]">
 
             <div className="w-full max-w-6xl">
 
@@ -14,7 +14,7 @@ export default function FAQ() {
           p-4 sm:p-6 lg:p-10
         ">
 
-                    {/* LEFT SIDE */}
+                    {/* Left Side */}
                     <div className="w-full lg:w-1/2 flex flex-col justify-start">
                         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                             Frequently Asked Questions?
@@ -25,7 +25,7 @@ export default function FAQ() {
                         </p>
                     </div>
 
-                    {/* RIGHT SIDE */}
+                    {/* Right Side */}
                     <div className="w-full lg:w-1/2">
 
                         <div className="collapse collapse-plus mb-4 bg-white rounded-xl">

@@ -13,6 +13,7 @@ import FeatureShowcase from "./Components/Home/FeatureShowcase";
 import LogesLine from "./Components/Home/LogesLine";
 import Testimonials from "./Components/Home/Testimonials";
 
+
 const primaryFeatures = [
     {
         icon: FaShieldHalved,
